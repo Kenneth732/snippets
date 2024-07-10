@@ -66,9 +66,7 @@ async function generateSnippet(language) {
     if (!snippetContent) {
         vscode.window.showErrorMessage(vscode.workspace.getConfiguration().get('my-meaningful-extension.snippetContentRequiredMessage', 'Snippet generation canceled: snippet content is required.'));
         return;
-    }
-
-    try {
+    } try {
         const workspaceFolder = vscode.workspace.workspaceFolders[0].uri.fsPath;
         const snippetFolderPath = path.join(workspaceFolder, '.vscode', 'snippets');
 
