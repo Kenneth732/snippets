@@ -1,3 +1,5 @@
+
+
 const vscode = require('vscode');
 const fs = require('fs');
 const path = require('path');
@@ -174,9 +176,7 @@ async function deleteSnippet() {
 
     if (!snippetFile) {
         return;
-    }
-
-    try {
+    } try {
         const snippetFilePath = path.join(vscode.workspace.workspaceFolders[0].uri.fsPath, '.vscode', 'snippets', snippetFile);
         fs.unlinkSync(snippetFilePath);
         vscode.window.showInformationMessage(vscode.workspace.getConfiguration().get('my-meaningful-extension.snippetDeletedSuccessfullyMessage', `Snippet "${snippetFile}" deleted successfully!`));
@@ -208,3 +208,4 @@ module.exports = {
     activate,
     deactivate
 };
+
