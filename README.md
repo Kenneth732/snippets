@@ -1,5 +1,5 @@
 ```markdown
-# My Snippet Extension
+# vs code Snippet Extensions 
 
 ## Overview
 "My Snippet Extension" is a Visual Studio Code extension designed to streamline the process of creating, updating, and deleting code snippets. This extension supports JavaScript, TypeScript, and HTML snippets, making it easier for developers to manage and reuse common code patterns across their projects.
