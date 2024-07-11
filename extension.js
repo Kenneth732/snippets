@@ -64,7 +64,8 @@ async function generateSnippet(language) {
     if (!snippetContent) {
         vscode.window.showErrorMessage(vscode.workspace.getConfiguration().get('my-meaningful-extension.snippetContentRequiredMessage', 'Snippet generation canceled: snippet content is required.'));
         return;
-    } try {
+    } 
+    try {
         const workspaceFolder = vscode.workspace.workspaceFolders[0].uri.fsPath;
         const snippetFolderPath = path.join(workspaceFolder, '.vscode', 'snippets');
 
@@ -172,7 +173,8 @@ async function deleteSnippet() {
 
     if (!snippetFile) {
         return;
-    } try {
+    } 
+    try {
         const snippetFilePath = path.join(vscode.workspace.workspaceFolders[0].uri.fsPath, '.vscode', 'snippets', snippetFile);
         fs.unlinkSync(snippetFilePath);
         vscode.window.showInformationMessage(vscode.workspace.getConfiguration().get('my-meaningful-extension.snippetDeletedSuccessfullyMessage', `Snippet "${snippetFile}" deleted successfully!`));
